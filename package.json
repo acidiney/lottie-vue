@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib -wc --name lottie-vue src/main.js --hide-modules",
     "lint": "vue-cli-service lint"
   },
+  "main": "./dist/lottie-vue.common.js",
+  "sideEffects": false,
   "dependencies": {
     "core-js": "^3.6.4",
+    "lottie-web": "^5.6.8",
     "vue": "^2.6.11"
   },
   "devDependencies": {
